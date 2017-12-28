@@ -1,8 +1,11 @@
 var express = require("express");
 var app = express();
 
+app.use(express.static( __dirname +"/sounds" ));
+app.use(express.static( __dirname +"/stylesheets" ));
+
 app.get("/",function(req,res){
-    res.render("patatap.html");
+    res.render("patatap.ejs");
 });
 
 
